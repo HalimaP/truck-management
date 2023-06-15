@@ -1,0 +1,199 @@
+.container {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: 3% 3% 6% 2%;
+    padding: 18px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    font-size: 16px;
+    width: 17%;
+    font-weight: 700;
+    color: rgb(35, 8, 156);
+    margin: 1%
+  }
+  
+  .overview {
+    position: relative;
+    padding: 10px;
+    /* margin-right: 37%; */
+    border: none;
+    color: rgb(236, 234, 244);
+    border-radius: 12px;
+    width: 9%;
+    font-weight: 700;
+    background: linear-gradient(to right, #446fef, #4847ef);
+    margin-left: 0%;
+    margin-right: 8%;
+  }
+  
+  .custom-button {
+    height: 30px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 10px;
+    color: rgb(35, 8, 156);
+    border-radius: 12px;
+    width: 13%;
+    font-weight: 700;
+    border: none;
+    margin: 0 1%;
+  }
+  
+  .button-text {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    text-wrap: nowrap;
+
+  }
+  
+  .number-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px;
+    background-color: rgb(38, 61, 213);
+    color: #b5d7f8;
+    width: 17%;
+    height: 80%;
+    border-radius: 0 23% 23% 0;
+    font-weight: 900;
+    font-size: 12px;
+  }
+  
+  .exclamation-mark {
+    width: 14px;
+    height: 18px;
+    position: absolute;
+    top: -8px;
+    right: -11px;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    padding: 1px;
+    border-radius: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px;
+    height: 30px;
+  }
+  
+  .search-input {
+    padding: 6px 10px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .search-button {
+    background-color: transparent;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+  }
+  
+  .search-icon {
+    color: #ccc;
+    font-size: 16px;
+  }
+  
+ /* Mobile view styles */
+@media only screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  h1{
+    font-size: 16px;
+    width: 50%;
+    font-weight: 700;
+    color: rgb(35, 8, 156);
+    margin-left: 2%;
+   
+  }
+    .overview {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .custom-button {
+      width: 100%;
+      height: 12%;
+      margin-bottom: 10px;
+    }
+  
+    .number-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 3px;
+        background-color: rgb(38, 61, 213);
+        color: #b5d7f8;
+        width: 7%;
+        height: 100%;
+        border-radius: 0% 50% 50% 0;
+        font-weight: 900;
+        font-size: 12px;
+    }
+  
+    .exclamation-mark {
+      width: 24px;
+      height: 24px;
+      font-size: 14px;
+    }
+  
+    .search-bar {
+        position: absolute;
+        top: 18px;
+        right: -17px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 2px;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 999;
+        width: 35%;
+        height: 3%;
+    }
+  
+    .search-input {
+      padding: 6px 10px;
+      border: none;
+      font-size: 14px;
+      outline: none;
+      width: 100%;
+    }
+  
+    .search-button {
+      background-color: transparent;
+      border: none;
+      padding: 6px;
+      cursor: pointer;
+    }
+  
+    .search-icon {
+      color: #ccc;
+      font-size: 16px;
+    }
+  }
+  

@@ -109,8 +109,11 @@
   }
   
   .search-icon {
-    color: #ccc;
-    font-size: 16px;
+  
+        color: #ccc;
+        font-size: 26px;
+        font-weight: 900;
+    
   }
   
  /* Mobile view styles */

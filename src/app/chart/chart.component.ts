@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chart.component.css']
 })
 export class ChartComponent implements OnInit {
+	selectedDate: Date = new Date();
+
   chartOptions = {
 		animationEnabled: true,
 		theme: "light2",
@@ -90,7 +92,9 @@ export class ChartComponent implements OnInit {
 			]
 		}]
 	}	
-  constructor() { }
+  constructor() {
+	this.selectedDate = new Date();
+   }
 
   ngOnInit(): void {
   }

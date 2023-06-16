@@ -8,12 +8,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { AppRoutingModule } from './app-routing.module';
 import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
-import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
-import { MatLegacySlideToggleModule as MatSlideToggleModule } from '@angular/material/legacy-slide-toggle';
+
 import { HomeComponent } from './home/home.component';
-import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
+import {  MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
-import {MatDatepickerModule} from '@angular/material/datepicker'
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { FormsModule, FormGroup,ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,17 +27,24 @@ import {MatDatepickerModule} from '@angular/material/datepicker'
     HomeComponent
   ],
   imports: [
+    MatNativeDateModule ,
+    MatDatepickerModule ,
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
     CanvasJSAngularChartsModule,
     AppRoutingModule,
     MatIconModule,
-    MatInputModule,
-    MatSlideToggleModule,
+    MatButtonModule,
     MatFormFieldModule,
     HttpClientModule,
-    MatDatepickerModule 
+    BsDatepickerModule,
+    FormsModule,
+    MatFormFieldModule,
+ ReactiveFormsModule,
+    FormsModule,
+  
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { MatDatepickerToggle } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-chart',
@@ -6,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chart.component.css']
 })
 export class ChartComponent implements OnInit {
-	selectedDate: Date = new Date();
-
+	
+	minDate = new Date(2023, 0, 3); 
+maxDate = new Date(2023, 0, 15);
+ 
+	range: FormGroup = new FormGroup({
+		 start: new FormControl<Date | null>(null),
+  end: new FormControl<Date | null>(null),
+	  });
   chartOptions = {
 		animationEnabled: true,
 		theme: "light2",
@@ -93,10 +101,41 @@ export class ChartComponent implements OnInit {
 		}]
 	}	
   constructor() {
-	this.selectedDate = new Date();
+
    }
 
-  ngOnInit(): void {
-  }
+   ngOnInit(): void {
 
+	// Check if there are saved dates in local storage
+	const savedStartDate = localStorage.getItem('startDate');
+	const savedEndDate = localStorage.getItem('endDate');
+  
+	// Set the form control values if dates are found in local storage
+	if (savedStartDate && savedEndDate) {
+	  this.range.controls['start'].setValue(new Date(savedStartDate));
+	  this.range.controls['end'].setValue(new Date(savedEndDate));
+	}
+  
+	// Subscribe to form control value changes and update local storage
+	this.range.valueChanges.subscribe((value) => {
+	  const startDate = value.start;
+	  const endDate = value.end;
+	  if (startDate && endDate) {
+		localStorage.setItem('startDate', startDate.toISOString());
+		localStorage.setItem('endDate', endDate.toISOString());
+	  }
+	});
+  }
+ 
+  
 }
+
+
+
+
+
+
+
+
+  
+

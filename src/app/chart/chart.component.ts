@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { MatDatepickerToggle } from '@angular/material/datepicker';
-
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../modal/modal.component';
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
@@ -16,6 +17,39 @@ maxDate = new Date(2023, 0, 15);
 		 start: new FormControl<Date | null>(null),
   end: new FormControl<Date | null>(null),
 	  });
+	  items = [
+		{
+		  mainTitle: 'Card 1',
+		  description: 'Description 1',
+		  icon:'  <mat-icon class="key-icon">vpn_key</mat-icon>'
+		},
+		{
+		  mainTitle: 'Card 2',
+		  description: 'Description 2',
+		  icon:'  <mat-icon class="key-icon">vpn_key</mat-icon>'
+		},
+		{
+		  mainTitle: 'Card 3',
+		  description: 'Description 3',
+		  icon:'  build_circle'
+		},
+		{
+		  mainTitle: 'Card 4',
+		  description: 'Description 2',
+		  icon:'  <mat-icon class="key-icon">vpn_key</mat-icon>'
+		},
+		{
+		  mainTitle: 'Card 5',
+		  description: 'Description 2',
+		  icon:'  <mat-icon class="key-icon">vpn_key</mat-icon>'
+		},
+		{
+		  mainTitle: 'Card 6',
+		  description: 'Description 2',
+		  icon:'  <mat-icon class="key-icon">vpn_key</mat-icon>'
+		},
+	
+	  ];
   chartOptions = {
 		animationEnabled: true,
 		theme: "light2",
@@ -100,7 +134,7 @@ maxDate = new Date(2023, 0, 15);
 			]
 		}]
 	}	
-  constructor() {
+  constructor(private dialog: MatDialog) {
 
    }
 
@@ -127,7 +161,17 @@ maxDate = new Date(2023, 0, 15);
 	});
   }
  
+  openDialog() {
+	const dialogRef = this.dialog.open(ModalComponent, {
+		panelClass: 'right-dialog-container',
+	  // Set dialog options if needed
+	});
   
+	// Subscribe to the dialog's afterClosed event if you need to handle the result
+	dialogRef.afterClosed().subscribe(result => {
+	  // Handle the result if needed
+	});
+  }
 }
 
 

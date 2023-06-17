@@ -8,10 +8,166 @@
 .chart-wrapper{
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    margin: 3%;
-    width: 90%;
-    padding: 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3%;
+    height: 500px;
 }
+.box-text {
+    margin-top: 5px; /* Adjust the spacing between icon and text as needed */
+  }
+  
+  .box {
+    position: relative;
+  
+  }
+  
+  .active-trucks{
+    line-height: 2px;
+   
+    
+  }
+  .trucks{
+    margin-top: 4%;
+    font-size: 13px;
+    font-weight: 900;
+   
+}
+
+
+  
+  .bottom-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .percentages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding-top: 78%;
+  }
+  
+  .boxItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .center {
+    grid-column: 1 / 3;
+  }
+  
+  .percentages div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    padding: 10px;
+  }
+  
+  .percentages span {
+    font-size: 40px;
+    color: #2d2dee;
+    font-weight: 900;
+  }
+  
+  .percentages p {
+    font-size: 14px;
+    position: relative;
+    bottom: 19%;
+    right: -74px;
+  }
+ .percentages .empty-trucks{
+    font-size: 14px;
+    position: relative;
+    bottom: 6%;
+    right: -52px;
+
+  }
+  .percentages h6 {
+    margin: 0;
+    font-size: 10px;
+    font-weight: normal;
+    text-align: center;
+    width: 62px;
+    color: #182a92;
+  }
+  
+  .bottom-line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .bottom-line div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bottom-line div span {
+    position: relative;
+  }
+  
+  .bottom-line div p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+  }
+  
+  
+.current-number{
+    margin-top: -3px;
+    font-size: 10px;
+}
+  .box-tooltip {
+    position: absolute;
+    top: -36px;
+    right: -87px;
+    padding: 5px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px 12px 12px 0;
+    width: 80px;
+    font-size: 13px;
+    background-color: white;
+  }
+
+  
+  
+  
+  
+  
+.side-menu {
+    width: 30%; 
+   position: relative;
+        box-shadow:4px -1px 5px -5px rgba(0, 0, 0, 0.5);;
+    
+      
+  }
+  .side-menu-icons{
+    color: rgba(152, 147, 147, 0.997);
+  }
+  .bordered{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bus-icon{
+    background: linear-gradient(to right, #446fef, #2d2dee);
+    color: white;
+    border-radius: 8px 0 0 0px;
+
+  }
 .selected-period{
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
@@ -91,7 +247,7 @@ span{
     flex-direction: row;
     margin-top: 2%;
     margin-bottom: 0px;
-    width: 24%;
+    width: 34%;
     justify-content: space-between;
  
 }
@@ -143,10 +299,23 @@ span{
     line-height: 13px;
     font-size: 9px;
 }
-.date-picker-wrapper{
+
+  
+.parent-container {
     display: flex;
     flex-direction: row;
     width: 100%;
+  }
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px; 
+  }
+.date-picker-wrapper{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Align items vertically in the center */
 }
 h3{color: rgb(38, 61, 213);;}
 .date-range{

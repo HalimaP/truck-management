@@ -17,6 +17,10 @@ import { FormsModule, FormGroup,ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { ModalComponent } from './modal/modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CardsComponent } from './cards/cards.component';
+
 
 
 @NgModule({
@@ -24,7 +28,9 @@ import { MatButtonModule } from '@angular/material/button';
     AppComponent,
     HeaderComponent,
     ChartComponent,
-    HomeComponent
+    HomeComponent,
+    ModalComponent,
+    CardsComponent
   ],
   imports: [
     MatNativeDateModule ,
@@ -43,6 +49,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatFormFieldModule,
  ReactiveFormsModule,
     FormsModule,
+    MatDialogModule
   
    
   ],

@@ -164,7 +164,8 @@
       height: 24px;
       font-size: 14px;
     }
-  
+  .side-menu{  display: flex;
+    flex-direction: column; }
     .search-bar {
         position: absolute;
         top: 18px;

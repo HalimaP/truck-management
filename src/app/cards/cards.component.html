@@ -1,0 +1,26 @@
+<div class="cards">
+    <div *ngFor="let item of items" class="card">
+        <h3>{{ item.mainTitle }}</h3>
+        <p>{{ item.description }}</p>
+        <i class="fas fa-wrench square-icon"></i>
+      <div class="card-content">
+        <div class="info-row">
+          <div class="info">
+          'prvi div'
+          </div>
+          <div class="info">
+            <h4>Author: {{ item.author }}</h4>
+            <p>Date: {{ item.date }}</p>
+          </div>
+          <div class="info">
+            <h4>Category: {{ item.category }}</h4>
+            <p>Views: {{ item.views }}</p>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button>See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

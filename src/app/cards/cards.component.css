@@ -1,59 +1,227 @@
 .cards {
-    display: flex;
-    gap: 10px;
-    margin-top: 2%;
-    /* flex-wrap: wrap; */
-  }
-  
-  .card {
-    flex-basis: 250px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    background-color: white;
-  }
-  
-  .card-content {
-    padding: 20px;
-  }
-  
-  .info-row {
-    display: flex;
+  display: flex;
+  gap: 10px;
+  margin-top: 2%;
+}
+
+.card {
+  flex-basis: 250px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  position: relative;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info {
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  padding: 6%;
+
+
+
+}
+.first-div-header{
+  display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: flex-start;
+}
+.info h3,
+.info h4 {
+  margin: 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 6%;
+}
+
+.card-footer button {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: rgb(244, 244, 250, 6%);
+  color: rgba(92, 91, 91, 58%);
+  font-weight: 700;
+  font-size: 12px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 900px) {
+  .cards {
     flex-direction: column;
-    gap: 10px;
   }
-  
-  .info {
-    border-radius: 15px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+
+.exclamation-mark {
+    position: absolute !important;
+    top: 34% !important;
+    left: 89% !important;
   }
-  
-  .info h3,
-  .info h4 {
-    margin: 0;
-  }
-  
-  .card-footer {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    margin-top: 6%;
-  }
-  
-  .card-footer button {
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    background-color: rgb(244, 244, 250, 6%);
-    color: rgba(92, 91, 91, 58%);
-    font-weight: 700;
-    font-size: 12px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  @media screen and (max-width: 600px) {
-    .cards {
-      flex-direction: column;
-    }
-  }
-  
+}
+
+.first-icon {
+  background-color: blue;
+  border-radius: 3px;
+  padding: 5px;
+  margin-right: 3%;
+  width: 13%;
+  height: 57%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.first-icon mat-icon {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.dealership {
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+  height: 32px;
+  align-items: baseline;
+  margin-left: 4%;
+  position: relative;
+}
+
+.mat-icon {
+  color: rgb(39, 13, 235);
+}
+
+.info-icon {
+  position: absolute;
+  top: 7px;
+  right: 0px;
+  color: blue;
+  z-index: 1;
+  font-size: 16px;
+}
+
+.exclamation-mark {
+  position: absolute;
+  top: 34%;
+  left: 68%;
+  transform: translateY(-50%);
+  background-color: red;
+  border-radius: 12%;
+  color: white;
+  padding: 1px;
+  font-size: 12px;
+  width: 17px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-title h3{
+  background: linear-gradient(to right, #4a58c3c4, #1a1ad5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.info span{
+  /* position: absolute;
+  top: 61px;
+  right: 25px; */
+  font-size: 8px;
+  color: gray;
+  font-weight: 800;
+}
+.info p{
+  font-size: 10px;
+  color: gray;
+  margin: 0;
+ 
+}
+.info h6{
+  font-size: 23px;
+  margin-top: -5%;
+}
+.first-div-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.div-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.div-numbers::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 53%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 89%;
+  background-color: black;
+}
+
+.div-numbers span {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.time-format {
+  display: flex;
+  justify-content: center;
+  margin-top: 11%;
+}
+
+.time-part {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.time-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.time-label {
+  font-size: 12px;
+  color: gray;
+}
+
+.cost{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8%;
+}
+
+
+

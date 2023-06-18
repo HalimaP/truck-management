@@ -20,6 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ModalComponent } from './modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CardsComponent } from './cards/cards.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -49,7 +50,8 @@ import { CardsComponent } from './cards/cards.component';
     MatFormFieldModule,
  ReactiveFormsModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    FontAwesomeModule,
   
    
   ],

@@ -3,13 +3,26 @@ import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators }
 import { MatDatepickerToggle } from '@angular/material/datepicker';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
+import { faTools } from '@fortawesome/free-solid-svg-icons';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faWrench, faUser} from '@fortawesome/free-solid-svg-icons';
+import { faCity } from '@fortawesome/free-solid-svg-icons';
+
+
+// Ostatak koda komponente...
+
+
+// Ostatak koda komponente...
+
+
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.css']
 })
 export class ChartComponent implements OnInit {
-	
+	faWrench = faWrench;
+	faUser = faUser;
 	minDate = new Date(2023, 0, 3); 
 maxDate = new Date(2023, 0, 15);
  
@@ -19,35 +32,49 @@ maxDate = new Date(2023, 0, 15);
 	  });
 	  items = [
 		{
-		  mainTitle: 'Card 1',
+		  mainTitle: 'Dealership',
 		  description: 'Description 1',
-		  icon:'  <mat-icon class="key-icon">vpn_key</mat-icon>'
+		  faIcon:'',
+		  matIcon: 'build',
+		  firstDivValues: {
+			title: 'Trucks in dealership',
+			withDriver: 5,
+			noDriver: 1,
+			value: 7,
+			dailyAverage: 12
+		  }
 		},
 		{
-		  mainTitle: 'Card 2',
+		  mainTitle: 'Shop',
 		  description: 'Description 2',
-		  icon:'  <mat-icon class="key-icon">vpn_key</mat-icon>'
+		  faIcon: '',
+		  matIcon: 'person'
 		},
 		{
-		  mainTitle: 'Card 3',
+		  mainTitle: 'Road service',
 		  description: 'Description 3',
-		  icon:'  build_circle'
+		  faIcon:'',
+		  matIcon: 'change_history'
 		},
 		{
-		  mainTitle: 'Card 4',
+		  mainTitle: 'Yard',
 		  description: 'Description 2',
-		  icon:'  <mat-icon class="key-icon">vpn_key</mat-icon>'
+		  faIcon:'',
+		  matIcon: 'apartment'
 		},
 		{
-		  mainTitle: 'Card 5',
+		  mainTitle: 'Recovery',
 		  description: 'Description 2',
-		  icon:'  <mat-icon class="key-icon">vpn_key</mat-icon>'
+		  faIcon:'',
+		  matIcon: 'undo'
 		},
 		{
-		  mainTitle: 'Card 6',
+		  mainTitle: 'Abandoned',
 		  description: 'Description 2',
-		  icon:'  <mat-icon class="key-icon">vpn_key</mat-icon>'
+		  faIcon:'',
+		  matIcon: 'error'
 		},
+		
 	
 	  ];
   chartOptions = {
@@ -134,8 +161,8 @@ maxDate = new Date(2023, 0, 15);
 			]
 		}]
 	}	
-  constructor(private dialog: MatDialog) {
-
+  constructor(private dialog: MatDialog, private library: FaIconLibrary ) {
+	library.addIcons(faTools, faWrench, faUser,faCity);
    }
 
    ngOnInit(): void {

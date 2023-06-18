@@ -1,20 +1,83 @@
 <div class="cards">
     <div *ngFor="let item of items" class="card">
+        <div class="dealership">
+        <div *ngIf="item.matIcon === 'build'" class="first-icon">
+            <mat-icon>{{item.matIcon}}</mat-icon>
+        </div>
+        <div class="main-title">
+        <mat-icon class="mat-icon" *ngIf="item.matIcon !== 'build'">{{item.matIcon}}</mat-icon>
         <h3>{{ item.mainTitle }}</h3>
-        <p>{{ item.description }}</p>
-        <i class="fas fa-wrench square-icon"></i>
+    </div>
+        <fa-icon *ngIf="item.faIcon !=='' " [icon]="['fas', item.faIcon]"></fa-icon>
+        <mat-icon *ngIf="item.matIcon === 'build'" class="exclamation-mark">priority_high</mat-icon>
+        <mat-icon class="info-icon">info</mat-icon>
+    </div>
+
       <div class="card-content">
         <div class="info-row">
           <div class="info">
-          'prvi div'
+            <div class="first-div-header">
+            <p>
+          {{item.firstDivValues?.title}}
+        </p>
+        <span>Today</span>
+    </div>
+        <br>
+        <div class="first-div-value">
+            <h6 style="margin-bottom: 0;"><strong>{{item.firstDivValues?.value}}</strong></h6>
+            <div class="div-numbers">
+              <span>
+                With driver
+                <br>
+               <strong> {{item.firstDivValues?.withDriver}}</strong>
+              </span>
+              <span>
+                No driver
+                <br>
+               <strong> {{item.firstDivValues?.noDriver}}</strong>
+              </span>
+            </div>
+            <span style="margin-top: 10px;">Daily average: {{item.firstDivValues?.dailyAverage}} trucks</span>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           </div>
           <div class="info">
-            <h4>Author: {{ item.author }}</h4>
-            <p>Date: {{ item.date }}</p>
+            <p> Average repair time</p>
+            <div class="time-format">
+                <div class="time-part">
+                    <div class="time-label">days</div>
+                  <div class="time-value">05:</div>
+                 
+                </div>
+                <div class="time-part">
+                    <div class="time-label">hours</div>
+                  <div class="time-value">04:</div>
+                  
+                </div>
+                <div class="time-part">
+                    <div class="time-label">minutes</div>
+                  <div class="time-value">57</div>
+                 
+                </div>
+              </div>
+              
           </div>
           <div class="info">
-            <h4>Category: {{ item.category }}</h4>
-            <p>Views: {{ item.views }}</p>
+            <p>Repairs in Dealership cost</p>
+            <div class="cost">
+           <h4>$335.000</h4>
+           <span>$0.07 CPM</span>
+        </div>
           </div>
         </div>
         <div class="card-footer">
@@ -23,4 +86,3 @@
       </div>
     </div>
   </div>
-  

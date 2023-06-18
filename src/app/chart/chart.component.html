@@ -14,7 +14,7 @@
       <mat-icon class="date-range">date_range</mat-icon>
     </div>
     </div>
-<button class="create-order"  (click)="openDialog()"> Create  <br>  Work Order  <mat-icon class="build-icon">build</mat-icon></button>
+<button class="create-order"  (click)="openDialog()"> Create  <br>  Work Order     <fa-icon class="build-icon" [icon]="['fas', 'wrench']" [class.fa-light]="true" [class.fa-xs]="true"></fa-icon> </button>
 </div>
        
       
@@ -24,7 +24,9 @@
       <div class="side-menu">
         <div class="bordered">
         <mat-icon class="bus-icon">directions_bus</mat-icon>
-        <mat-icon class="side-menu-icons">build</mat-icon>
+        <!-- <mat-icon class="side-menu-icons">build</mat-icon> -->
+        <fa-icon class="side-menu-icons" [icon]="['fas', 'wrench']" [class.fa-light]="true" [class.fa-xs]="true"></fa-icon>
+
         <div class="box">
         <mat-icon class="side-menu-icons">local_gas_station</mat-icon>
         <!-- <span class="box-text">Text</span> -->

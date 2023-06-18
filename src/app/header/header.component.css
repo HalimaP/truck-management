@@ -1,11 +1,8 @@
 .container {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     display: flex;
-    margin: 3% 3% 3% 3%;
-    padding: 18px;
     justify-content: space-between;
     align-items: center;
-    width: 92%;
+    padding: 18px;
     border-radius: 8px;
   }
   
@@ -14,34 +11,31 @@
     width: 17%;
     font-weight: 700;
     color: rgb(35, 8, 156);
-    margin: 1%
+    margin: 0;
   }
   
   .overview {
-    position: relative;
     padding: 10px;
-    /* margin-right: 37%; */
     border: none;
     color: rgb(236, 234, 244);
     border-radius: 12px;
     width: 9%;
     font-weight: 700;
     background: linear-gradient(to right, #446fef, #4847ef);
-    margin-left: 0%;
     margin-right: 8%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   }
   
   .custom-button {
-      /* height: 30px; */
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-      position: relative;
-      padding: 10px;
-      color: rgb(35, 8, 156);
-      border-radius: 12px;
-      /* width: 13%; */
-      font-weight: 700;
-      border: none;
-      margin: 0 1%;
+    position: relative;
+    padding: 10px;
+    color: rgb(35, 8, 156);
+    border-radius: 12px;
+    font-weight: 700;
+    border: none;
+    margin: 0 1%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    width: 17%;
   }
   
   .button-text {
@@ -49,7 +43,7 @@
     display: flex;
     flex-direction: row;
     text-wrap: nowrap;
-
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   }
   
   .number-badge {
@@ -62,9 +56,9 @@
     padding: 3px;
     background-color: rgb(38, 61, 213);
     color: #b5d7f8;
-    width: 17%;
-    height: 80%;
-    border-radius: 0 23% 23% 0;
+    width: 30px;
+    height: 84%;
+    border-radius: 0 12px 12px 0;
     font-weight: 900;
     font-size: 12px;
   }
@@ -73,8 +67,8 @@
     width: 14px;
     height: 18px;
     position: absolute;
-    top: -17px;
-    right: -138px;
+    top: -10px;
+    right: 0;
     font-size: 16px;
     color: white;
     background-color: red;
@@ -83,7 +77,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   }
   
   .search-bar {
@@ -92,7 +86,6 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 2px;
-    height: 30px;
   }
   
   .search-input {
@@ -110,27 +103,26 @@
   }
   
   .search-icon {
-  
-        color: #ccc;
-        font-size: 26px;
-        font-weight: 900;
-    
+    color: #ccc;
+    font-size: 26px;
+    font-weight: 900;
   }
   
- /* Mobile view styles */
-@media only screen and (max-width: 768px) {
+  /* Mobile view styles */
+  @media only screen and (max-width: 768px) {
     .container {
       flex-direction: column;
       align-items: flex-start;
     }
-  h1{
-    font-size: 16px;
-    width: 50%;
-    font-weight: 700;
-    color: rgb(35, 8, 156);
-    margin-left: 2%;
-   
-  }
+  
+    h1 {
+      font-size: 16px;
+      width: 50%;
+      font-weight: 700;
+      color: rgb(35, 8, 156);
+      margin-left: 2%;
+    }
+  
     .overview {
       width: 100%;
       margin-bottom: 10px;
@@ -143,42 +135,43 @@
     }
   
     .number-badge {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        padding: 3px;
-        background-color: rgb(38, 61, 213);
-        color: #b5d7f8;
-        width: 7%;
-        height: 100%;
-        border-radius: 0% 50% 50% 0;
-        font-weight: 900;
-        font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 3px;
+      background-color: rgb(38, 61, 213);
+      color: #b5d7f8;
+      width: 7%;
+      height: 81%;
+      border-radius: 0 50% 50% 0;
+      font-weight: 900;
+      font-size: 12px;
     }
   
     .exclamation-mark {
       width: 24px;
       height: 24px;
       font-size: 14px;
+      top: -10px;
+      right: -10px;
     }
-  .side-menu{  display: flex;
-    flex-direction: column; }
+  
     .search-bar {
-        position: absolute;
-        top: 18px;
-        right: -17px;
-        display: flex;
-        align-items: center;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        padding: 2px;
-        background-color: rgba(255, 255, 255, 0.8);
-        z-index: 999;
-        width: 35%;
-        height: 3%;
+      position: absolute;
+      top: 18px;
+      right: -17px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 2px;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 999;
+      width: 35%;
+      height: 3%;
     }
   
     .search-input {

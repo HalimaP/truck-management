@@ -1,113 +1,164 @@
 <div class="container">
-    <div class="overview-wrapper">
-    <h3>Overview</h3>
-   
-   
+  <div class="overview-wrapper">
+    <h3 class="overview-title">Overview</h3>
+
+    <div class="buttons">
       <div class="selected-period">
-      <p>Selected period
-        <br>
-        <span *ngIf="range.controls.start.value && range.controls.end.value">
-          {{ range.controls.start.value | date }} - {{ range.controls.end.value | date }}
-        </span>
-      </p>
-      <div class="calendar-icon">
-      <mat-icon class="date-range">date_range</mat-icon>
+        <p>
+          Selected period
+          <br />
+          <span *ngIf="range.controls.start.value && range.controls.end.value">
+            {{ range.controls.start.value | date }} -
+            {{ range.controls.end.value | date }}
+          </span>
+        </p>
+        <div class="calendar-icon">
+          <mat-icon class="date-range">date_range</mat-icon>
+        </div>
+      </div>
+      <button class="create-order" (click)="openDialog()">
+        <p>
+          Create <br />
+          Work Order
+        </p>
+        <fa-icon
+          class="build-icon"
+          [icon]="['fas', 'wrench']"
+          [class.fa-light]="true"
+          [class.fa-xs]="true"
+        ></fa-icon>
+      </button>
     </div>
-    </div>
-<button class="create-order"  (click)="openDialog()"> Create  <br>  Work Order     <fa-icon class="build-icon" [icon]="['fas', 'wrench']" [class.fa-light]="true" [class.fa-xs]="true"></fa-icon> </button>
-</div>
-       
-      
-      
-<div class="chart-wrapper">
+  </div>
+
+  <div class="chart-wrapper">
     <div class="parent-container">
       <div class="side-menu">
         <div class="bordered">
-        <mat-icon class="bus-icon">directions_bus</mat-icon>
-        <!-- <mat-icon class="side-menu-icons">build</mat-icon> -->
-        <fa-icon class="side-menu-icons" [icon]="['fas', 'wrench']" [class.fa-light]="true" [class.fa-xs]="true"></fa-icon>
+          <mat-icon class="bus-icon">directions_bus</mat-icon>
+          <!-- <mat-icon class="side-menu-icons">build</mat-icon> -->
+          <fa-icon
+            class="side-menu-icons"
+            [icon]="['fas', 'wrench']"
+            [class.fa-light]="true"
+            [class.fa-xs]="true"
+          ></fa-icon>
 
-        <div class="box">
-        <mat-icon class="side-menu-icons">local_gas_station</mat-icon>
-        <!-- <span class="box-text">Text</span> -->
-  <p class="box-tooltip">Fuel <br> Consumption</p>
-    </div>
-        <mat-icon class="side-menu-icons">settings</mat-icon>
-        <mat-icon class="side-menu-icons">person</mat-icon>
-    </div>
-    <div class="active-trucks">
-    <h3 class="trucks">Active Trucks</h3> <br>
-    <p class="current-number">Current number of trucks with assigned drivers.</p>
-    </div>
-    <div class="percentages">
-        <div class="boxItem center">
-          <div style="margin-top: -12%;">
-            <span>215</span>
-            <p>74%</p>
+          <div class="box">
+            <mat-icon class="side-menu-icons">local_gas_station</mat-icon>
+            <!-- <span class="box-text">Text</span> -->
+            <p class="box-tooltip">
+              Fuel <br />
+              Consumption
+            </p>
+          </div>
+          <mat-icon class="side-menu-icons">settings</mat-icon>
+          <mat-icon class="side-menu-icons">person</mat-icon>
+        </div>
+        <div class="active-trucks">
+          <h3 class="trucks">Active Trucks</h3>
+          <br />
+          <p class="current-number">
+            Current number of trucks with assigned drivers.
+          </p>
+        </div>
+        <div class="percentages">
+          <div class="boxItem center">
+            <div style="margin-top: -12%">
+              <span>215</span>
+              <p>74%</p>
+            </div>
+          </div>
+          <div class="boxItem">
+            <div>
+              <h6>Total Trucks</h6>
+              <br />
+              <span>250</span>
+              <!-- <p>74%</p> -->
+            </div>
+          </div>
+          <div class="boxItem">
+            <div style="line-height: 24px">
+              <h6>Empty Trucks</h6>
+              <br />
+              <span style="margin-bottom: -8%">35</span>
+              <p class="empty-trucks">74%</p>
+            </div>
           </div>
         </div>
-        <div class="boxItem">
-          <div>
-            <h6>Total Trucks</h6> <br>
-            <span>250</span>
-            <!-- <p>74%</p> -->
-          </div>
-        </div>
-        <div class="boxItem">
-          <div style="line-height: 24px;">
-            <h6>Empty Trucks</h6>
-            <br>
-            <span style="margin-bottom: -8%;">35</span>
-            <p class="empty-trucks">74%</p>
-          </div>
-        </div>
-      </div>
-      
-      
-      
-      
-      
-      
-      
       </div>
       <div class="content-wrapper">
-        <div class="text-wrapper">
-          <h3 style="margin-bottom: 0px;">Utilization Timeline</h3> 
-          <p>A graph showing the number of trucks with assigned driver versus loaded trucks.<br>
-          The actual amount will be shown in the preview by day. The preview by week or higher range will reveal average numbers.</p>
-          <div class="utilization-average">
-            <div class="utilization-item">
-              <p>Utilization</p>
-              <br>
-              <span class="average">63%</span>
-              <mat-icon class="info-icon">info</mat-icon>
-            </div>
-            <div class="utilization-item">
-              <p>Total Utilization</p>
-              <br><span class="average">54%</span>
-              <mat-icon class="info-icon2">info</mat-icon>
+        <div class="chart-top-menu">
+          <div class="text-wrapper">
+            <h3 style="margin-bottom: 0px">Utilization Timeline</h3>
+            <p>
+              A graph showing the number of trucks with assigned driver versus
+              loaded trucks.<br />
+              The actual amount will be shown in the preview by day. The preview
+              by week or higher range will reveal average numbers.
+            </p>
+            <div class="utilization-average">
+              <div class="utilization-item">
+                <p>Utilization</p>
+                <br />
+                <span class="average">63%</span>
+                <mat-icon class="info-icon">info</mat-icon>
+              </div>
+              <div class="utilization-item">
+                <p>Total Utilization</p>
+                <br /><span class="average">54%</span>
+                <mat-icon class="info-icon2">info</mat-icon>
+              </div>
             </div>
           </div>
+          <form [formGroup]="range" class="form-container">
+            <mat-form-field class="custom-form-field">
+              <mat-date-range-input
+                [rangePicker]="picker"
+                class="custom-range-input"
+              >
+                <input
+                  matStartDate
+                  formControlName="start"
+                  [min]="minDate"
+                  [max]="maxDate"
+                  placeholder="Start date"
+                  class="custom-input"
+                />
+                <input
+                  matEndDate
+                  formControlName="end"
+                  [min]="minDate"
+                  [max]="maxDate"
+                  placeholder="End date"
+                  class="custom-input"
+                />
+              </mat-date-range-input>
+              <div class="rounded-side">
+                <p>By month</p>
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker"
+                  class="custom-toggle"
+                >
+                  <mat-icon matDatepickerToggleIcon
+                    >keyboard_arrow_down</mat-icon
+                  >
+                </mat-datepicker-toggle>
+              </div>
+              <mat-date-range-picker #picker></mat-date-range-picker>
+            </mat-form-field>
+          </form>
         </div>
-        <form [formGroup]="range" class="form-container">
-          <mat-form-field>
-            <mat-date-range-input [rangePicker]="picker">
-              <input matStartDate formControlName="start" [min]="minDate" [max]="maxDate" placeholder="Start date">
-              <input matEndDate formControlName="end" [min]="minDate" [max]="maxDate" placeholder="End date">
-            </mat-date-range-input>
-            <span>By month</span>
-            <mat-datepicker-toggle matSuffix [for]="picker">
-              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-            </mat-datepicker-toggle>
-            <mat-date-range-picker #picker></mat-date-range-picker>
-          </mat-form-field>
-        </form>
+        <br />
         <div class="chart-container">
-          <canvasjs-chart [options]="chartOptions" [styles]="{width: '90%', height: '270px'}"></canvasjs-chart>
+          <canvasjs-chart
+            [options]="chartOptions"
+            [styles]="{ width: '100%', height: '250px' }"
+          ></canvasjs-chart>
         </div>
       </div>
     </div>
   </div>
   <app-cards [items]="items"></app-cards>
-  
 </div>

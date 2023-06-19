@@ -1,14 +1,25 @@
-<!-- app.component.html -->
-
 <div class="container">
-    <h1>Fleet Health</h1>
-    <button class="overview">Overview</button>
-    <button  class="custom-button">
+  <div class="top-row">
+    <div class="left-section">
+      <h1>Fleet Health</h1>
+      <button class="overview">Overview</button>
+    </div>
+    <div class="right-section">
+      <div class="search-bar">
+        <input type="text" class="search-input" />
+        <button class="search-button">
+          <mat-icon class="search-icon">search</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-row">
+    <button class="custom-button">
       <span class="button-text">Dealer & Shop</span>
       <span class="number-badge">8</span>
       <mat-icon class="exclamation-mark">priority_high</mat-icon>
     </button>
-    <button  class="custom-button">
+    <button class="custom-button">
       <span class="button-text">Yard</span>
       <span class="number-badge">8</span>
     </button>
@@ -16,15 +27,9 @@
       <span class="button-text">Recovery</span>
       <span class="number-badge">18</span>
     </button>
-    <button  class="custom-button">
+    <button class="custom-button">
       <span class="button-text">Abandoned</span>
       <span class="number-badge">3</span>
     </button>
-    <div class="search-bar">
-      <input type="text" class="search-input">
-      <button class="search-button">
-        <mat-icon class="search-icon">search</mat-icon>
-      </button>
-    </div>
   </div>
-  
+</div>

@@ -1,7 +1,10 @@
 .cards {
   display: flex;
-  gap: 10px;
-  margin-top: 2%;
+  flex-wrap: wrap;
+  max-width: 100%;
+  width: 100%;
+  /* gap: 9px; */
+  margin: 2% 0 0 4%;
 }
 
 .card {
@@ -10,6 +13,8 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   background-color: white;
   position: relative;
+  margin-right: 2%;
+  margin-bottom: 3%;
 }
 
 .card-content {
@@ -23,18 +28,15 @@
 }
 
 .info {
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  padding: 6%;
-
-
-
+  border-radius: 10px !important;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) !important;
+  padding: 6% !important;
 }
-.first-div-header{
+.first-div-header {
   display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 .info h3,
 .info h4 {
@@ -59,18 +61,93 @@ align-items: flex-start;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
   .cards {
     flex-direction: column;
+    margin: 124% 0 0 0%;
   }
-
-.exclamation-mark {
+  .info {
+    padding: 2%;
+  }
+  .main-title h3 {
+    background: linear-gradient(to right, #4a58c3c4, #1a1ad5) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+    font-size: 23px !important;
+    font-weight: 900 !important;
+  }
+  .info-icon {
+    position: absolute !important;
+    top: -20px !important;
+    right: -14px !important;
+    color: blue !important;
+    z-index: 1 !important;
+    font-size: 25px !important;
+  }
+  .exclamation-mark {
     position: absolute !important;
     top: 34% !important;
-    left: 89% !important;
+    left: 81% !important;
+    width: 25px !important;
+    height: 25px !important;
+    position: absolute !important;
+    top: -13% !important;
+    left: 87% !important;
+  }
+  .card {
+    padding: 15%;
+    height: 400px;
   }
 }
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3% 0% 0% 0%;
+  }
+  .main-title h3 {
+    background: linear-gradient(to right, #4a58c3c4, #1a1ad5) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+    font-size: 23px !important;
+    font-weight: 900 !important;
+  }
+  .card {
+    width: 50%;
 
+    margin: auto;
+    margin-bottom: 3%;
+  }
+  .main-title h3 {
+    background: linear-gradient(to right, #4a58c3c4, #1a1ad5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 23px;
+    font-weight: 900;
+  }
+  .info-icon {
+    position: absolute;
+    top: 7px;
+    right: 2px;
+    color: blue;
+    z-index: 1;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 33.33%;
+    flex-basis: 363px;
+  }
+}
 .first-icon {
   background-color: blue;
   border-radius: 3px;
@@ -81,7 +158,6 @@ align-items: flex-start;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .first-icon mat-icon {
@@ -103,6 +179,7 @@ align-items: flex-start;
 
 .mat-icon {
   color: rgb(39, 13, 235);
+  font-size: 20px;
 }
 
 .info-icon {
@@ -111,13 +188,13 @@ align-items: flex-start;
   right: 0px;
   color: blue;
   z-index: 1;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .exclamation-mark {
   position: absolute;
-  top: 34%;
-  left: 68%;
+  top: 40%;
+  left: 81%;
   transform: translateY(-50%);
   background-color: red;
   border-radius: 12%;
@@ -125,41 +202,37 @@ align-items: flex-start;
   padding: 1px;
   font-size: 12px;
   width: 17px;
-  height: 15px;
+  height: 19px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-title{
+.main-title {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-.main-title h3{
+.main-title h3 {
   background: linear-gradient(to right, #4a58c3c4, #1a1ad5);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  font-size: 14px;
+  font-size: 19px;
   font-weight: 900;
 }
 
-.info span{
-  /* position: absolute;
-  top: 61px;
-  right: 25px; */
+.info span {
   font-size: 8px;
   color: gray;
   font-weight: 800;
 }
-.info p{
+.info p {
   font-size: 10px;
   color: gray;
   margin: 0;
- 
 }
-.info h6{
+.info h6 {
   font-size: 23px;
   margin-top: -5%;
 }
@@ -216,12 +289,9 @@ align-items: flex-start;
   color: gray;
 }
 
-.cost{
+.cost {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 8%;
 }
-
-
-

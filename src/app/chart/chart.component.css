@@ -1,10 +1,12 @@
 .container {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  margin: 3%;
-  width: 93%;
-  padding: 3%;
+  border-radius: 28px;
+  width: 100%;
+  padding: 2%;
+  max-width: 93%;
+  margin: auto;
 }
+
 .chart-wrapper {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -13,8 +15,8 @@
   flex-direction: column;
   align-items: flex-start;
   margin-top: 3%;
-  height: 500px;
 }
+
 .box-text {
   margin-top: 5px;
 }
@@ -52,30 +54,38 @@
   margin: 0;
 }
 
-/* side menu css  */
 .side-menu {
   box-shadow: 4px -1px 5px -5px rgba(0, 0, 0, 0.5);
 }
+
 .side-menu-icons {
   color: rgba(152, 147, 147, 0.997);
+  zoom: 1.5;
 }
+
 .bordered {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 12%;
 }
+
 .bus-icon {
   background: linear-gradient(to right, #446fef, #2d2dee);
   color: white;
-  border-radius: 8px 0 0 0px;
+  border-radius: 4px 0 0 0px;
+  width: 23px;
+  height: 22px;
+  zoom: 1.5;
 }
+
 .percentages {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-  padding-top: 50%;
+  grid-gap: 23px;
+  padding-top: 13%;
 }
 
 .center {
@@ -91,68 +101,74 @@
 }
 
 .percentages span {
-  font-size: 40px;
+  font-size: 48px;
   color: #2d2dee;
   font-weight: 900;
 }
 
 .percentages p {
-  font-size: 14px;
+  font-size: 21px;
   position: relative;
   bottom: 19%;
-  right: -74px;
+  right: -93px;
 }
+
 .percentages .empty-trucks {
-  font-size: 14px;
+  font-size: 21px;
   position: relative;
   bottom: 6%;
-  right: -52px;
+  right: -68px;
 }
+
 .percentages h6 {
   margin: 0;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: normal;
   text-align: center;
   width: 62px;
   color: #182a92;
 }
+
 .box-tooltip {
   position: absolute;
-  top: -36px;
+  top: -45px;
   right: -87px;
   padding: 5px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   border-radius: 12px 12px 12px 0;
-  width: 80px;
-  font-size: 13px;
+  width: 89px;
+  height: 36px;
+  font-size: 15px;
   background-color: white;
 }
+
 .active-trucks {
-  line-height: 9px;
+  line-height: 17px;
 }
+
 .trucks {
   margin-top: 4%;
   margin-bottom: -2%;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 900;
 }
+
 .current-number {
-  margin-top: 0px;
-  font-size: 11px;
+  font-size: 16px;
 }
-/* End of side-menu css */
-/* SELECTED PERION CSS */
+
 @media screen and (max-width: 650) {
   .container {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
-    /* margin: 3%; */
     width: 90%;
     padding: 8%;
   }
+
   .selected-period {
     font-size: 13px !important;
   }
+
   .calendar-icon {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
@@ -166,6 +182,7 @@
     position: fixed;
     right: 48.6%;
   }
+
   .overview-wrapper {
     display: flex !important;
     justify-content: space-between !important;
@@ -174,22 +191,23 @@
   }
 
   .overview-title {
-    flex: 1 !important ;
-    margin-right: 10px !important ;
-    font-size: 20px !important ;
+    flex: 1 !important;
+    margin-right: 10px !important;
+    font-size: 20px !important;
   }
 
   .buttons {
-    display: flex !important ;
-    flex-wrap: wrap !important ;
-    justify-content: flex-end !important ;
-    align-items: center !important ;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
   }
 
   .create-order {
     margin-top: 10px !important;
     flex-basis: 100% !important;
   }
+
   .overview-wrapper {
     display: flex;
     justify-content: space-between;
@@ -197,33 +215,41 @@
     margin-bottom: 11%;
   }
 }
+
 .selected-period {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
-  width: 50%;
-  padding: 1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: none;
   background-color: white;
   color: #42424278;
-  height: 33px;
-  font-size: 14px;
+  height: 72px;
+  font-size: 17px;
   flex: 1;
-  height: 34px;
+  padding-left: 2%;
 }
+
+.selected-period span {
+  color: #3a39399e;
+  margin-left: 2%;
+  width: 80%;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
 .selected-period p {
   flex: 1;
   padding-right: 10px;
-  line-height: 10px;
+  line-height: 17px;
 }
 
 .create-order {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
-  height: 43px;
-  padding: 2%;
+  height: 2%;
+  padding: 1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -235,23 +261,41 @@
   align-items: center;
   flex: 1;
 }
-.create-order p {
+
+.create-order div {
   flex: 1;
-  padding-right: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 600;
+  line-height: 30px;
+  background: linear-gradient(to right, #1f28f0b8, #030340);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #00000030;
 }
+
+.create-order b {
+  margin-left: -15%;
+  font-size: 18px;
+  margin-top: 9px;
+  font-weight: 900;
+}
+
 .calendar-icon {
   border-radius: 11px;
-  width: 46px;
-  height: 40px;
+  width: 51px;
+  height: 49px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  margin-right: -3%;
+  flex-shrink: 1;
+  zoom: 1.5;
   box-shadow: -6px 0 18px -13px rgba(0, 0, 0, 0.8);
 }
+
 .date-range {
-  font-size: 25px;
+  font-size: 18px;
   color: #42424278;
 }
 
@@ -271,23 +315,26 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 387px;
+  width: width;
+  max-width: 100%;
+  width: 60%;
 }
+
 .build-icon {
-  font-size: 19px;
+  font-size: 25px;
   color: white;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  width: 24%;
-  height: 33px;
+  width: 15%;
+  height: 45px;
+  max-height: 100%;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgb(38, 61, 213);
 }
-/* -------END OF SELECTED PERIOD CSS ----------- */
-/* Start of top menu above the chart  */
+
 .chart-top-menu {
   display: flex;
   justify-content: space-between;
@@ -295,31 +342,16 @@
 
 .chart-top-menu .text-wrapper {
   flex-basis: 60%;
-  /* Dodajte ostale stilove prema potrebama */
 }
 
 .chart-top-menu .form-container {
-  flex-basis: 97%;
+
   margin-top: 1%;
 }
 
-@media (max-width: 767px) {
-  .chart-top-menu {
-    flex-direction: column;
-  }
-
-  .chart-top-menu .form-container {
-    margin: 3% 0% 3% 0%;
-  }
-  .text-wrapper {
-    width: 67% !important;
-  }
-}
-
-/* End of start top menu  */
 .overview-wrapper h3 {
   color: rgb(38, 61, 213);
-  font-size: 31px;
+  font-size: 20px;
 }
 
 p {
@@ -327,16 +359,19 @@ p {
   width: 100%;
   margin: 0px;
 }
+
 span {
   color: #42424278;
   margin-left: 8%;
   width: 80%;
   font-size: 12px;
 }
+
 .average {
   font-size: 18px;
   font-weight: 800;
 }
+
 .toggle-container {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   height: 51px;
@@ -345,6 +380,7 @@ span {
   display: inline;
   margin-left: -8%;
 }
+
 .utilization-average {
   display: flex;
   flex-direction: row;
@@ -353,6 +389,7 @@ span {
   width: 34%;
   justify-content: space-between;
 }
+
 .utilization-item {
   position: relative;
 }
@@ -361,6 +398,7 @@ span {
   display: flex;
   align-items: flex-start;
 }
+
 .info-icon2 {
   font-size: 12px;
   position: absolute;
@@ -370,6 +408,7 @@ span {
   margin-right: 5px;
   color: rgb(38, 61, 213);
 }
+
 .info-icon {
   font-size: 12px;
   position: absolute;
@@ -388,7 +427,6 @@ span {
   font-size: 9px;
 }
 
-/* Izmjene za redoslijed >>>>>>>>> ODAVDE!!!! */
 .parent-container {
   display: flex;
   flex-direction: row;
@@ -402,67 +440,283 @@ span {
 .content-wrapper {
   flex: 0 0 70%;
   z-index: 1;
-  box-shadow: 4px -1px 5px -5px rgba(0, 0, 0, 0.5);
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
   grid-gap: 10px;
   padding-left: 10px;
 }
 
-/* Media query za male ekrane */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
+  .chart-top-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chart-top-menu .form-container {
+    margin-top: 5%;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: width;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .selected-period {
+    height: 45px;
+  }
+
+  .bus-icon {
+    zoom: 1.5;
+  }
+
+  .bordered {
+    margin-top: 3%;
+  }
+
+  .side-menu-icons {
+    zoom: 1.5;
+  }
+
+  .selected-period p {
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  .selected-period span {
+    margin-left: 0;
+    font-size: 12px;
+
+  }
+
+  .calendar-icon {
+
+    width: 58px;
+    height: 46px;
+
+    zoom: 1;
+
+  }
+
+  .create-order {
+    height: 45px;
+  }
+
+  .create-order b {
+    font-size: 16px;
+    margin-left: -17%;
+  }
+
+  .create-order div {
+    font-size: 16px;
+  }
+
   .text-wrapper {
     width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    width: 44%;
+    line-height: 22px;
+    font-size: 18px;
   }
-  .chart-container {
-    margin-top: -96%;
+
+  .text-wrapper h3 {
+    font-size: 20px;
   }
+
+  .utilization-average {
+    width: 56%;
+  }
+
+  .info-icon2 {
+    font-size: 25px;
+    top: 12px;
+    right: 33px;
+  }
+
+  .build-icon {
+    font-size: 21px;
+    width: 16%;
+  }
+
+  .info-icon {
+    font-size: 24px;
+    position: absolute;
+    top: 13px;
+    right: 14px;
+    margin-top: 19px;
+    margin-right: -18px;
+    color: rgb(38, 61, 213);
+  }
+
+  .average {
+    font-size: 28px;
+  }
+
   .percentages {
     padding-left: 0px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    padding-top: 50px;
+    padding-top: 152px;
   }
 
-  element.style {
-  }
+
   .overview-wrapper {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 11%;
   }
+
   .parent-container {
     flex-direction: column;
   }
+
   .side-menu {
     padding: 8%;
     box-shadow: 4px -1px 5px -5px rgba(0, 0, 0, 0.5);
     width: 100%;
     display: contents;
   }
+
   .side-menu,
   .content-wrapper {
-    flex: 0 0 100%; /* Puna širina na malim ekranima */
+    flex: 0 0 100%;
   }
+
   .content-wrapper {
     margin-top: 51%;
     max-width: 100%;
     width: 94%;
     margin: auto;
-    margin-top: 50%;
+    margin-top: 30%;
+
   }
+
 }
 
-/* >>>>>>>>>>>>>>>>>>>>DOVDE !!!!!! */
+@media screen and (max-width: 400px) {
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    padding: 2px;
+    width: 40%;
+    margin-left: auto;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    height: 5%;
+  }
+
+  .trucks {
+    font-size: 16px !important;
+  }
+
+  .current-number {
+    font-size: 13px;
+  }
+
+  .percentages span {
+    font-size: 33px;
+  }
+
+  .percentages p {
+    font-size: 15px;
+    position: relative;
+    bottom: 19%;
+    right: -67px;
+
+  }
+
+  .percentages .empty-trucks {
+    font-size: 15px;
+    position: relative;
+    bottom: 6%;
+    right: -50px;
+  }
+
+  .active-trucks {
+    line-height: 11px;
+  }
+
+  .selected-period p {
+    font-size: 11px;
+    line-height: 9px;
+  }
+
+  .selected-period span {
+    font-size: 9px
+  }
+
+  .create-order div {
+    font-size: 14px;
+  }
+
+  .create-order b {
+    font-size: 13px;
+    margin-left: -26%;
+  }
+
+  .build-icon {
+    width: 25%;
+  }
+
+  .text-wrapper h3 {
+    font-size: 16px;
+  }
+
+  .text-wrapper {
+    line-height: 16px;
+    font-size: 14px;
+
+  }
+
+  .average {
+    font-size: 16px;
+  }
+
+  .info-icon {
+    font-size: 16px;
+    position: absolute;
+    top: 4px;
+    right: 14px;
+    margin-top: 19px;
+    margin-right: -10px;
+    color: rgb(38, 61, 213);
+  }
+
+  .info-icon2 {
+    font-size: 16px;
+    top: 4px;
+    right: 33px;
+
+  }
+
+  .card-footer button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: rgb(244, 244, 250, 6%);
+    color: rgba(92, 91, 91, 58%);
+    font-weight: 700;
+    font-size: 16px !important;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+}
 
 .date-picker-wrapper {
   flex: 1;
   display: flex;
   flex-direction: row;
-  align-items: center; /* Align items vertically in the center */
+  align-items: center;
 }
+
 h3 {
   color: rgb(38, 61, 213);
 }
@@ -480,68 +734,69 @@ h3 {
   margin-top: -6%;
   margin-right: -5%;
 }
+
 .rounded-side {
   display: flex;
   flex-direction: revert;
   justify-content: unset;
   align-items: center;
-  border-radius: 17px;
-  padding: 8px;
-  height: 14px;
-  top: 0;
-  width: 40%;
-  font-size: 11px;
+  border-radius: 67px;
+  padding: 16px;
+  height: 2em;
+  width: 36%;
+  font-size: 13px;
   box-shadow: -10px 0 10px -9px rgba(0, 0, 0, 0.5);
+  margin-top: 4%;
 }
-::ng-deep
-  .mdc-text-field--no-label:not(.mdc-text-field--outlined):not(
-    .mdc-text-field--textarea
-  )
-  .mat-mdc-form-field-infix {
+
+::ng-deep .mdc-text-field--no-label:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mat-mdc-form-field-infix {
   display: flex;
   height: 20px;
   border-radius: 29px;
   align-items: center;
 }
-::ng-deep
-  .mdc-text-field--no-label:not(.mdc-text-field--textarea)
-  .mat-mdc-form-field-input-control.mdc-text-field__input,
+
+::ng-deep .mdc-text-field--no-label:not(.mdc-text-field--textarea) .mat-mdc-form-field-input-control.mdc-text-field__input,
 .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control {
   width: 52% !important;
+  margin-top: 4%;
 }
+
 ::ng-deep .mat-date-range-input-inner {
-  font-size: 12px !important;
+  font-size: 14px !important;
   color: #42424278 !important;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 20px;
 }
+
 ::ng-deep .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
   border-radius: 20px;
+
   ::ng-deep.mdc-text-field--filled:not(.mdc-text-field--disabled) {
     background-color: white;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   }
 }
-::ng-deep
-  .mdc-text-field--filled:not(.mdc-text-field--disabled)
-  .mdc-line-ripple::before {
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
   border-bottom-color: rgba(246, 240, 240, 0.05) !important;
 }
+
 ::ng-deep.mdc-text-field--filled:not(.mdc-text-field--disabled) {
   background-color: white;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  width: 17em !important;
+  width: 19em !important;
   max-width: 100%;
+  height: 3em;
+  font-size: 17px;
 }
+
 :host /deep/ .mdc-form-field.custom-form-field .mdc-line-ripple::before,
 :host /deep/ .mdc-form-field.custom-form-field .mdc-line-ripple::after {
   border-bottom-style: hidden;
 }
+
 ::ng-deep .mat-mdc-form-field-infix {
   min-height: 30px !important;
-}
-@media screen and (max-width: 768px) {
-  .overview-wrapper h3 {
-    color: rgb(38, 61, 213);
-    font-size: 17px;
-  }
 }

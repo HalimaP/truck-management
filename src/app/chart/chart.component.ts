@@ -1,18 +1,15 @@
 import { Component, Input, OnInit } from "@angular/core";
 import {
-  AbstractControl,
   FormControl,
   FormGroup,
-  ValidationErrors,
-  Validators,
 } from "@angular/forms";
-import { MatDatepickerToggle } from "@angular/material/datepicker";
 import { MatDialog } from "@angular/material/dialog";
 import { ModalComponent } from "../modal/modal.component";
 import { faTools } from "@fortawesome/free-solid-svg-icons";
 import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
 import { faWrench, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faCity } from "@fortawesome/free-solid-svg-icons";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: "app-chart",
@@ -24,92 +21,11 @@ export class ChartComponent implements OnInit {
   faUser = faUser;
   minDate = new Date(2023, 0, 3);
   maxDate = new Date(2023, 0, 15);
-
+  items: any;
   range: FormGroup = new FormGroup({
     start: new FormControl<Date | null>(null),
     end: new FormControl<Date | null>(null),
   });
-  items = [
-    {
-      mainTitle: "Dealership",
-      description: "Description 1",
-      faIcon: "",
-      matIcon: "build",
-      firstDivValues: {
-        title: "Trucks in Shop",
-        withDriver: 5,
-        noDriver: 1,
-        value: 7,
-        dailyAverage: 12,
-      },
-    },
-    {
-      mainTitle: "Shop",
-      description: "Description 2",
-      faIcon: "",
-      matIcon: "person",
-	  firstDivValues: {
-        title: "Roadside assistance",
-        withDriver: 7,
-        noDriver: 4,
-        value: 11,
-        dailyAverage: 19,
-      },
-    },
-    {
-      mainTitle: "Road service",
-      description: "Description 3",
-      faIcon: "",
-      matIcon: "change_history",
-	  firstDivValues: {
-        title: "Roadside assistance",
-        withDriver: 5,
-        noDriver: 2,
-        value: 7,
-        dailyAverage: 19,
-      },
-    },
-    {
-      mainTitle: "Yard",
-      description: "Description 2",
-      faIcon: "",
-      matIcon: "apartment",
-	  firstDivValues: {
-        title: "Trucks at the Yard",
-        withDriver: 7,
-        noDriver: 4,
-        value: 11,
-        dailyAverage: 19,
-      },
-    },
-    {
-      mainTitle: "Recovery",
-      description: "Description 2",
-      faIcon: "",
-      matIcon: "undo",
-	  firstDivValues: {
-        title: "Trucks in Recovery status",
-        withDriver: 7,
-        noDriver: 6,
-        value: 18,
-        dailyAverage: 19,
-      },
-	  
-    },
-    {
-      mainTitle: "Abandoned",
-      description: "Description 2",
-      faIcon: "",
-      matIcon: "error",
-	  firstDivValues: {
-        title: "Abandoned Trucks",
-        withDriver: 7,
-        noDriver: 11,
-        value: 7,
-        dailyAverage: 19,
-      },
-    },
-  ];
   chartOptions = {
     animationEnabled: true,
     theme: "light2",
@@ -270,11 +186,20 @@ export class ChartComponent implements OnInit {
       },
     ],
   };
-  constructor(private dialog: MatDialog, private library: FaIconLibrary) {
+  constructor(private dialog: MatDialog, private library: FaIconLibrary, private http: HttpClient) {
     library.addIcons(faTools, faWrench, faUser, faCity);
   }
 
   ngOnInit(): void {
+    this.http.get('./assets/cards-data.json').subscribe(
+      (data) => {
+        this.items = data;
+      },
+      (error) => {
+
+      }
+    );
+
     // Check if there are saved dates in local storage
     const savedStartDate = localStorage.getItem("startDate");
     const savedEndDate = localStorage.getItem("endDate");
@@ -300,7 +225,10 @@ export class ChartComponent implements OnInit {
     const dialogRef = this.dialog.open(ModalComponent, {
       panelClass: "right-dialog-container",
     });
+    dialogRef.componentInstance.closeModal.subscribe(() => {
+      dialogRef.close();
+    });
 
-    dialogRef.afterClosed().subscribe((result) => {});
   }
+
 }

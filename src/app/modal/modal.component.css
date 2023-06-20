@@ -7,7 +7,7 @@
   width: 47% !important ;
   height: 80% !important;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   ::ng-deep .cdk-overlay-pane {
     position: absolute !important;
     pointer-events: auto !important;
@@ -21,10 +21,9 @@
   }
 
   .container button {
-    position: fixed !important;
-
-    bottom: 139px !important;
-    right: 125px !important;
+    position: absolute;
+    bottom: 40% !important;
+    right: 88px !important;
     border: none !important;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1) !important;
     background-color: #fff !important;
@@ -196,9 +195,9 @@ h3 {
   background-color: rgb(0 0 0 / 5%);
 }
 .container button {
-  position: fixed;
-  bottom: 156px;
-  right: 102px;
+  position: absolute;
+  bottom: 30%;
+  right: 124px;
   border: none;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;

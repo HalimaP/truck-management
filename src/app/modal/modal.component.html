@@ -34,7 +34,7 @@
   <div class="item value">Bojana Bogdanovic</div>
   <div class="item first-column narrow">Load Status</div>
   <div class="item value">In transit</div>
-  <button>Next</button>
+  <button (click)="onCloseModal()">Next</button>
 </div>
 <br />
 
@@ -75,6 +75,6 @@
 
 <br />
 <div class="end-buttons">
-  <button>Discard</button>
-  <button>Finish</button>
+  <button (click)="onCloseModal()">Discard</button>
+  <button (click)="onCloseModal()">Finish</button>
 </div>

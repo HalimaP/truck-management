@@ -1,0 +1,81 @@
+[
+    {
+      "mainTitle": "Dealership",
+      "description": "Description 1",
+      "faIcon": "",
+      "matIcon": "build",
+      "firstDivValues": {
+        "title": "Trucks in Shop",
+        "withDriver": 5,
+        "noDriver": 1,
+        "value": 7,
+        "dailyAverage": 12
+      }
+    },
+    {
+      "mainTitle": "Shop",
+      "description": "Description 2",
+      "faIcon": "",
+      "matIcon": "person",
+      "firstDivValues": {
+        "title": "Roadside assistance",
+        "withDriver": 7,
+        "noDriver": 4,
+        "value": 11,
+        "dailyAverage": 19
+      }
+    },
+    {
+      "mainTitle": "Road service",
+      "description": "Description 3",
+      "faIcon": "",
+      "matIcon": "change_history",
+      "firstDivValues": {
+        "title": "Roadside assistance",
+        "withDriver": 5,
+        "noDriver": 2,
+        "value": 7,
+        "dailyAverage": 19
+      }
+    },
+    {
+      "mainTitle": "Yard",
+      "description": "Description 2",
+      "faIcon": "",
+      "matIcon": "apartment",
+      "firstDivValues": {
+        "title": "Trucks at the Yard",
+        "withDriver": 7,
+        "noDriver": 4,
+        "value": 11,
+        "dailyAverage": 19
+      }
+    },
+    {
+      "mainTitle": "Recovery",
+      "description": "Description 2",
+      "faIcon": "",
+      "matIcon": "undo",
+      "firstDivValues": {
+        "title": "Trucks in Recovery status",
+        "withDriver": 7,
+        "noDriver": 6,
+        "value": 18,
+        "dailyAverage": 19
+      }
+    },
+    {
+      "mainTitle": "Abandoned",
+      "description": "Description 2",
+      "faIcon": "",
+      "matIcon": "error",
+      "firstDivValues": {
+        "title": "Abandoned Trucks",
+        "withDriver": 7,
+        "noDriver": 11,
+        "value": 7,
+        "dailyAverage": 19
+      }
+    }
+  ]
+  

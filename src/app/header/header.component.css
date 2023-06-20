@@ -1,266 +1,113 @@
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px;
-  border-radius: 8px;
-  max-width: 100%;
-  width: 1000px;
-  margin: 2% 5% 1% -9%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 2%;
+    max-width: 100%;
+    width: 75%;
 }
 
 .left-section {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  width: 300px;
-  max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 300px;
+    max-width: 100%;
 }
 
 h1 {
-  font-size: 21px;
-  /* width: 83%; */
-  font-weight: 700;
-  color: rgb(37, 1, 199);
+    font-size: 31px;
+    font-weight: 700;
+    color: rgb(37, 1, 199);
+    width: 100%;
 }
 
 .overview {
-  padding: 11px;
-  border: none;
-  color: rgb(236, 234, 244);
-  border-radius: 12px;
-  width: 9%;
-  font-weight: 700;
-  background: linear-gradient(to right, #446fef, #4847ef);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  width: 50%;
-  height: 44px;
-  font-size: 18px;
-  margin-left: 4%;
-}
-
-.right-section {
-  display: flex;
-  align-items: center;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 2px;
-  position: absolute;
-  right: 16px;
-  top: 46px;
-  width: 16%;
-}
-
-.search-input {
-  padding: 6px 10px;
-  border: none;
-  font-size: 14px;
-  outline: none;
-  width: 63%;
-}
-
-.search-button {
-  background-color: transparent;
-  border: none;
-  padding: 6px;
-  cursor: pointer;
-}
-
-.search-icon {
-  color: #ccc;
-  font-size: 26px;
-  font-weight: 900;
-}
-
-.bottom-row {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  max-width: 100%;
-}
-
-.custom-button {
-  position: relative;
-  padding: 10px;
-  color: rgb(35, 8, 156);
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 14px;
-  border: none;
-  margin: 0 2%;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  width: 30%;
-  height: 44px;
-  max-width: 100%;
-}
-
-.button-text {
-  margin-right: 10px;
-  display: flex;
-  flex-direction: row;
-  text-wrap: nowrap;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-}
-
-.number-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 3px;
-  background-color: rgb(38, 61, 213);
-  color: #b5d7f8;
-  width: 30px;
-  height: 86%;
-  border-radius: 0 12px 12px 0;
-  font-weight: 900;
-  font-size: 31px;
-}
-
-.exclamation-mark {
-  width: 14px;
-  height: 18px;
-  position: absolute;
-  top: -10px;
-  right: 0;
-  font-size: 16px;
-  color: white;
-  background-color: red;
-  padding: 1px;
-  border-radius: 13%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Mobile view styles */
-@media screen and (max-width: 600px) {
-  .left-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 22em !important;
-    max-width: 100%;
-    position: relative;
-    left: 106px !important;
-  }
-  .custom-button {
-    width: 79% !important;
-    height: 34px !important;
-    left: 91px !important;
-  }
-}
-@media screen and (max-width: 768px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 18px;
-    border-radius: 8px;
-    width: 511px;
-  }
-  .left-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 27em;
-    max-width: 100%;
-    position: relative;
-    left: 23px;
-  }
-  .top-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 16px;
-    width: 17%;
-    font-weight: 700;
-    color: rgb(35, 8, 156);
-    margin: 0;
-  }
-
-  .overview {
-    padding: 10px;
+    padding: 11px;
     border: none;
     color: rgb(236, 234, 244);
     border-radius: 12px;
-    width: 30%;
     font-weight: 700;
     background: linear-gradient(to right, #446fef, #4847ef);
-    margin-right: 55%;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  }
+    width: 57%;
+    height: 45px;
+    font-size: 20px;
+    margin-left: 4%;
+}
 
-  .search-bar {
+.right-section {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 2px;
-    width: 33%;
-    margin-left: auto;
-    position: absolute;
-    top: 19px;
-    height: 4%;
-  }
+}
 
-  .search-input {
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 19px;
+    padding: 2px;
+    position: absolute;
+    right: 84px;
+    top: 58px;
+    height: 40px;
+    width: 15%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
     padding: 6px 10px;
     border: none;
     font-size: 14px;
     outline: none;
-    width: 80%;
-  }
+    width: 63%;
+}
 
-  .search-button {
+.search-button {
     background-color: transparent;
     border: none;
-    padding: 6px;
+    /* padding: 6px; */
     cursor: pointer;
-  }
+    zoom: 1;
+    margin-left: 5%;
+}
 
-  .bottom-row {
+.search-icon {
+    color: #ccc;
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.bottom-row {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 10px;
+    justify-content: space-around;
     width: 100%;
-  }
+    max-width: 100%;
+}
 
-  .custom-button {
+.custom-button {
     position: relative;
     padding: 10px;
     color: rgb(35, 8, 156);
     border-radius: 12px;
     font-weight: 700;
+    font-size: 16px;
     border: none;
-    margin-bottom: 10px;
+    margin: 0 2%;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    height: 34px;
-  }
+    width: 25%;
+    height: 45px;
+    max-width: 100%;
+}
 
-  .button-text {
+.button-text {
     margin-right: 10px;
     display: flex;
     flex-direction: row;
     text-wrap: nowrap;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  }
+}
 
-  .number-badge {
+.number-badge {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,14 +117,14 @@ h1 {
     padding: 3px;
     background-color: rgb(38, 61, 213);
     color: #b5d7f8;
-    width: 30px;
-    height: 82%;
+    width: 35px;
+    height: 86%;
     border-radius: 0 12px 12px 0;
     font-weight: 900;
-    font-size: 12px;
-  }
+    font-size: 20px;
+}
 
-  .exclamation-mark {
+.exclamation-mark {
     width: 14px;
     height: 18px;
     position: absolute;
@@ -292,5 +139,171 @@ h1 {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  }
+}
+
+@media screen and (max-width: 600px) {
+    .left-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 22em !important;
+        max-width: 100%;
+        position: relative;
+
+    }
+
+    .custom-button {
+        width: 100% !important;
+        height: 100% !important;
+
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .search-bar {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 13px;
+        padding: 2px;
+        width: 33%;
+        margin-left: auto;
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        height: 5% !important;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 96%;
+    }
+
+    .left-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 11em !important;
+        max-width: 100%;
+    }
+
+    .top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 19px;
+        width: 17%;
+        font-weight: 700;
+        color: rgb(35, 8, 156);
+        margin: 0;
+    }
+
+    .overview {
+        width: 51%;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .search-bar {
+
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 13px;
+        padding: 2px;
+        width: 33%;
+        margin-left: auto;
+        position: absolute;
+        top: 19px;
+        right: 20px;
+        height: 3%;
+    }
+
+    .search-input {
+        padding: 6px 10px;
+        border: none;
+        font-size: 14px;
+        outline: none;
+        width: 80%;
+    }
+
+    .search-button {
+        background-color: transparent;
+        border: none;
+        padding: 6px;
+        cursor: pointer;
+        zoom: 1;
+    }
+
+    .bottom-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 26px;
+        width: 520px;
+        height: 236px;
+
+    }
+
+    .custom-button {
+        position: relative;
+        padding: 10px;
+        color: rgb(35, 8, 156);
+        border-radius: 12px;
+        font-weight: 700;
+        border: none;
+        margin-bottom: 10px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 34px;
+    }
+
+    .button-text {
+        margin-right: 10px;
+        display: flex;
+        flex-direction: row;
+        text-wrap: nowrap;
+        text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .number-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 3px;
+        background-color: rgb(38, 61, 213);
+        color: #b5d7f8;
+        width: 54px;
+        height: 82%;
+        border-radius: 0 12px 12px 0;
+        font-weight: 900;
+        font-size: 18px;
+    }
+
+    .exclamation-mark {
+        width: 21px;
+        height: 27px;
+        position: absolute;
+        top: -17px;
+        right: 0;
+        font-size: 16px;
+        color: white;
+        background-color: red;
+        padding: 1px;
+        border-radius: 13%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    }
 }
